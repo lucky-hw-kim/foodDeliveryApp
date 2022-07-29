@@ -1,5 +1,6 @@
 import css from "../styles/Hero.module.css";
 import Cherry from "../assets/Cherry.png";
+import Pizza1 from "../assets/p1.jpg";
 import HeroImage from "../assets/HeroImage.png";
 import Image from "next/image";
 import {UilPhone} from '@iconscout/react-unicons'
@@ -39,6 +40,16 @@ const Hero = () => {
           <span>Contact Us</span>
           <div>
             <UilPhone color="white"/>
+          </div>
+        </div>
+        <div className={css.Pizza}>
+          <div>
+            <Image src={Pizza1}alt="" objectFit="cover" layout="intrinsic"/>
+          </div>
+          <div className={css.details}>
+            <span>Italian Pizza</span>
+            <span style={{color:"var(--themeRed)"}}>$</span>
+            <span>7.99</span>
           </div>
         </div>
       </div>
