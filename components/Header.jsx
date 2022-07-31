@@ -2,8 +2,16 @@ import css from "../styles/Header.module.css";
 import Logo from '../assets/Logo.png'
 import Image from "next/image";
 import {UilShoppingBag} from '@iconscout/react-unicons'
+import { useStore } from "../store/store";
+
 
 const Header = () => {
+  // state in terminal
+  const state = useStore((state)=>state)
+  console.log(state);
+
+  const items = useStore((state) => state.cart.pizzas.length)
+
   return <div className={css.header}>
     {/* logo side */}
     <div className={css.logo}>
@@ -21,7 +29,7 @@ const Header = () => {
     <div className={css.rightSide}>
       <div className={css.cart}>
         <UilShoppingBag size={35} color="#2E2E2E"/>
-        <div className={css.badge}>1</div>
+        <div className={css.badge}>{items}</div>
       </div>
     </div>
   </div>;
