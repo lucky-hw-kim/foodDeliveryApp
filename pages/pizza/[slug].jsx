@@ -6,6 +6,7 @@ import LeftArrow from "../../assets/arrowLeft.png";
 import RightArrow from "../../assets/arrowRight.png";
 import { useState } from "react";
 import { useStore } from "../../store/store";
+import toast, {Toaster} from 'react-hot-toast'
 
 
 export default function Pizza({ pizza }) {
@@ -25,7 +26,8 @@ export default function Pizza({ pizza }) {
   // Add to cart function 
   const addPizza = useStore((state) => state.addPizza)
   const addToCart = () => {
-    addPizza
+    addPizza({...pizza, price: pizza.price[size], quantity: quantity, size: size})
+    toast.success("Added to Cart")
   }
 
   return (
@@ -101,8 +103,9 @@ export default function Pizza({ pizza }) {
             </div>
           </div>
           {/* button */}
-          <div className={`btn ${css.btn}`}>Add to Cart</div>
+          <div className={`btn ${css.btn}`} onClick={addToCart}>Add to Cart</div>
         </div>
+        <Toaster/>
       </div>
     </Layout>
   );
