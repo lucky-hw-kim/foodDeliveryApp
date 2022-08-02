@@ -1,12 +1,17 @@
 import css from "../styles/Header.module.css";
 import Logo from '../assets/Logo.png'
 import Image from "next/image";
-import {UilShoppingBag} from '@iconscout/react-unicons'
+import {UilShoppingBag ,UilReceipt} from '@iconscout/react-unicons'
 import { useStore } from "../store/store";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 
 const Header = () => {
+  const [order, setOrder] = useState("");
+  useEffect(()=>{
+    setOrder(localStorage.getItem("order"))
+  }, [])
   // state in terminal
   const state = useStore((state)=>state)
   console.log(state);
@@ -37,6 +42,18 @@ const Header = () => {
         <div className={css.badge}>{items}</div>
       </div>
       </Link>
+
+      {order && (
+        <Link href={`/order/${order}`}>
+          <div className={css.cart}>
+            <UilReceipt size={35} color='#2E2E2E'/>
+            {order != "" && <div className={css.badge}>
+              1
+            </div>
+              }
+          </div>
+        </Link>
+      )}
   
     </div>
   </div>;
