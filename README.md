@@ -1,7 +1,5 @@
 <h1 align="center" id="title">Fudo</h1>
 
-<p align="center"><img src="" alt="project-image"></p>
-
 <p id="description">A Full Stack Food/Pizza React delivery application made using Next.js Zustand Stripe and Sanity.</p>
 
 <h2>🚀 Demo</h2>
@@ -10,9 +8,9 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://github.com/lucky-hw-kim/foodDeliveryApp/blob/main/img/fudo-payondelivery.gif?raw=true" alt="project-screenshot" width="400" height="auto" align="center"/>
+<img src="https://github.com/lucky-hw-kim/foodDeliveryApp/blob/main/img/fudo-payondelivery.gif?raw=true" alt="project-screenshot" width="600" height="auto" align="center"/>
 
-<img src="https://github.com/lucky-hw-kim/foodDeliveryApp/blob/main/img/fudo-paynow.gif?raw=true" alt="project-screenshot" width="400" height="auto" align="center"/>
+<img src="https://github.com/lucky-hw-kim/foodDeliveryApp/blob/main/img/fudo-paynow.gif?raw=true" alt="project-screenshot" width="600" height="auto" align="center"/>
 
   
   
