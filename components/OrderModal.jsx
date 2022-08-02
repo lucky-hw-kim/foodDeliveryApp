@@ -42,9 +42,12 @@ function OrderModal({opened, setOpened, paymentMethod}) {
     <input onChange={handleInput} type="text" name="name" required placeholder="Name" />
     <input onChange={handleInput} type="text" name="phone" required placeholder="Phone Number"/>
     <textarea onChange={handleInput} name="address" rows={3} placeholder="Address"></textarea>
-    <span>
-      You will pay <span>${total} </span> on delivery.
-    </span>
+    {paymentMethod===0 ? (
+          <span>
+          You will pay <span>${total} </span> on delivery.
+        </span>
+    ): <span>Paid Order</span>}
+
     <button type="submit" className="btn">Place Order</button>
      </form>
     </Modal>
